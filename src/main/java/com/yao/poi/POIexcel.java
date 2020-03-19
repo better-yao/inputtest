@@ -14,7 +14,7 @@ public class POIexcel {
 
     private static void InputExcel(File f) {
         try {
-            //POI文件导入功能
+            //POI文件导出成excel表文件功能
             HSSFWorkbook workbook = new HSSFWorkbook();//创建一个excel文件
 
             //-----------设置单元格格式-----------
