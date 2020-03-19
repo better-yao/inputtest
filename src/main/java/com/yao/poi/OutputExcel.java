@@ -2,7 +2,6 @@ package com.yao.poi;
 
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -21,8 +20,8 @@ public class OutputExcel {
     public static void imports(InputStream in ){
         String str = "";
         try {
-            fs = new POIFSFileSystem(in);//文件流
-            wb = new HSSFWorkbook(fs);//获得excel文件
+            fs = new POIFSFileSystem(in);//文件流(将指定的excel文件放入poi文件流中)
+            wb = new HSSFWorkbook(fs);//通过文件流获得excel文件的对象
             sheet=wb.getSheetAt(0);//获得工作薄
             //int rowfirst=sheet.getFirstRowNum();//获取第一行的行数（行数走的索引表达）
             int rowend=sheet.getLastRowNum();//获取最后一行的行数（行数走的索引表达）
@@ -42,11 +41,22 @@ public class OutputExcel {
         }
     }
 
+    //--------笔记--------
+    /*
+    CELL_TYPE_NUMERIC　　数值型　  0
+    CELL_TYPE_STRING　 字符串型   1 
+    CELL_TYPE_FORMULA　 公式型    2
+    CELL_TYPE_BLANK　　  空值     3  
+    CELL_TYPE_BOOLEAN　 布尔型    4
+    CELL_TYPE_ERROR　　 错误      5
+    */
+    //-------------------
+
     private static String getCellFormatValue(HSSFCell cell) {//自定义的函数方法（将每个单元格里面的数据进行格式化）
         String cellvalue = "";
         if (cell != null) {
             // 判断当前Cell的Type
-            switch (cell.getCellType()) {
+            switch (cell.getCellType()) {//用switch去实现getCellType()的值
                 // 如果当前Cell的Type为NUMERIC
                 case HSSFCell.CELL_TYPE_NUMERIC://数值类型
                 case HSSFCell.CELL_TYPE_FORMULA: {//公式类型
@@ -65,10 +75,10 @@ public class OutputExcel {
                     break;
                 default://默认值为空
                     cellvalue = " ";
-                    }
+            }
         } else {
             cellvalue = "";//cell值不符合上面的null值时，返回的结果改为空。
         }
-        return cellvalue;
+        return cellvalue;//将获取的单元格内容返还给main方法
     }
 }
