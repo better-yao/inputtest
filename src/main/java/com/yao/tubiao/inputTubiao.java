@@ -20,12 +20,12 @@ public class inputTubiao {
         try {
 
             String sql = "INSERT IGNORE INTO biao (datetime,location) VALUES (?,?)";
-            Connection conn = C3p0Utils.getConnection();
+            Connection conn = C3p0Utils.getConnection();//c3p0数据库连接池获取连接
             PreparedStatement ps=conn.prepareStatement(sql);
             ResultSet rs = null;
             BufferedReader bfd =null;
             String str;
-            conn.setAutoCommit(false);
+            conn.setAutoCommit(false);//设置为手动改提交  不是自动提交
             File sqlfile = new File("F:/公司文件/archive/biao/");
             if (sqlfile.exists() && sqlfile.isDirectory()) {
                 File[] f = sqlfile.listFiles();
@@ -43,18 +43,18 @@ public class inputTubiao {
                             }
                             ps.setString(1, datetime);
                             ps.setString(2, location);
-                            ps.addBatch();
+                            ps.addBatch();//打包
                         }
                         System.out.println(file.getName());
-                        ps.executeBatch();
-                        conn.commit();
-                        ps.clearBatch();
+                        ps.executeBatch();//执行sql
+                        conn.commit();//手动提交
+                        ps.clearBatch();//清空打入包的代码
                     }
 
 
                 }
             }
-            C3p0Utils.close(conn,ps,rs);
+            C3p0Utils.close(conn,ps,rs);//结束关闭资源
         }catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

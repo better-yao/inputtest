@@ -12,7 +12,7 @@ public class C3p0Utils {
     static Logger logger = Logger.getLogger(C3p0Utils.class.getName());
 
     //创建相应连接池
-    static ComboPooledDataSource dataSource=new ComboPooledDataSource("mysql");
+    static ComboPooledDataSource dataSource=new ComboPooledDataSource("mysql");//连接c3p0.xml文件的格式
 
 
     public static Connection getConnection(){

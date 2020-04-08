@@ -5,7 +5,7 @@ import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.Region;
 
 import java.io.*;
-
+//读取txt文件的数据，生成excel文件
 public class toExcel {
     public static void main(String[] args) {
         try {
@@ -21,10 +21,10 @@ public class toExcel {
                         System.out.print(s+",");
                     }
                 }
-                bw.write("\r\n");
+                bw.write("\r\n");//生成txt文件时用来换行用的（换行操作）
                 System.out.println();
             }
-            bw.flush();
+            bw.flush();//字符流写入要刷新，否则会有后面部分数据没有写入。刷新后就自动写入了。
             bw.close();
             br.close();
             File fpoi = new File("F:/full.xls");

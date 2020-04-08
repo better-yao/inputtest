@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+// 读取excel文件并且导出结果
 public class OutputExcel {
     private static POIFSFileSystem fs;//poi文件流
     private static HSSFWorkbook wb;//获得execl

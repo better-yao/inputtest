@@ -2,25 +2,16 @@ package com.yao.bean;
 
 public class Gpsfpd {
     public String DateTime;
-    public Float Heading;
-    public Float Roll;
-    public Float Pitch;
-    public Float Latitude;
-    public Float Longitude;
-    public Float Altitude;
-    public Float Ve;
-    public Float Vn;
-    public Float Vu;
-    public Float Baseline;
-    public Float spmx;
-    public Float spmy;
-    public Float spmz;
-    public Float aftx;
-    public Float afty;
-    public Float aftz;
-    public Float sway;
-    public Float surge;
-    public Float heave;
+    public float Heading;
+    public float Roll;
+    public float Pitch;
+    public float Latitude;
+    public float Longitude;
+    public float Altitude;
+    public float Ve;
+    public float Vn;
+    public float Vu;
+    public float Baseline;
 
     public String getDateTime() {
         return DateTime;
@@ -30,156 +21,84 @@ public class Gpsfpd {
         DateTime = dateTime;
     }
 
-    public Float getHeading() {
+    public float getHeading() {
         return Heading;
     }
 
-    public void setHeading(Float heading) {
+    public void setHeading(float heading) {
         Heading = heading;
     }
 
-    public Float getRoll() {
+    public float getRoll() {
         return Roll;
     }
 
-    public void setRoll(Float roll) {
+    public void setRoll(float roll) {
         Roll = roll;
     }
 
-    public Float getPitch() {
+    public float getPitch() {
         return Pitch;
     }
 
-    public void setPitch(Float pitch) {
+    public void setPitch(float pitch) {
         Pitch = pitch;
     }
 
-    public Float getLatitude() {
+    public float getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(Float latitude) {
+    public void setLatitude(float latitude) {
         Latitude = latitude;
     }
 
-    public Float getLongitude() {
+    public float getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(Float longitude) {
+    public void setLongitude(float longitude) {
         Longitude = longitude;
     }
 
-    public Float getAltitude() {
+    public float getAltitude() {
         return Altitude;
     }
 
-    public void setAltitude(Float altitude) {
+    public void setAltitude(float altitude) {
         Altitude = altitude;
     }
 
-    public Float getVe() {
+    public float getVe() {
         return Ve;
     }
 
-    public void setVe(Float ve) {
+    public void setVe(float ve) {
         Ve = ve;
     }
 
-    public Float getVn() {
+    public float getVn() {
         return Vn;
     }
 
-    public void setVn(Float vn) {
+    public void setVn(float vn) {
         Vn = vn;
     }
 
-    public Float getVu() {
+    public float getVu() {
         return Vu;
     }
 
-    public void setVu(Float vu) {
+    public void setVu(float vu) {
         Vu = vu;
     }
 
-    public Float getBaseline() {
+    public float getBaseline() {
         return Baseline;
     }
 
-    public void setBaseline(Float baseline) {
+    public void setBaseline(float baseline) {
         Baseline = baseline;
-    }
-
-    public Float getSpmx() {
-        return spmx;
-    }
-
-    public void setSpmx(Float spmx) {
-        this.spmx = spmx;
-    }
-
-    public Float getSpmy() {
-        return spmy;
-    }
-
-    public void setSpmy(Float spmy) {
-        this.spmy = spmy;
-    }
-
-    public Float getSpmz() {
-        return spmz;
-    }
-
-    public void setSpmz(Float spmz) {
-        this.spmz = spmz;
-    }
-
-    public Float getAftx() {
-        return aftx;
-    }
-
-    public void setAftx(Float aftx) {
-        this.aftx = aftx;
-    }
-
-    public Float getAfty() {
-        return afty;
-    }
-
-    public void setAfty(Float afty) {
-        this.afty = afty;
-    }
-
-    public Float getAftz() {
-        return aftz;
-    }
-
-    public void setAftz(Float aftz) {
-        this.aftz = aftz;
-    }
-
-    public Float getSway() {
-        return sway;
-    }
-
-    public void setSway(Float sway) {
-        this.sway = sway;
-    }
-
-    public Float getSurge() {
-        return surge;
-    }
-
-    public void setSurge(Float surge) {
-        this.surge = surge;
-    }
-
-    public Float getHeave() {
-        return heave;
-    }
-
-    public void setHeave(Float heave) {
-        this.heave = heave;
     }
 
     @Override
@@ -196,16 +115,6 @@ public class Gpsfpd {
                 ", Vn=" + Vn +
                 ", Vu=" + Vu +
                 ", Baseline=" + Baseline +
-                ", spmx=" + spmx +
-                ", spmy=" + spmy +
-                ", spmz=" + spmz +
-                ", aftx=" + aftx +
-                ", afty=" + afty +
-                ", aftz=" + aftz +
-                ", sway=" + sway +
-                ", surge=" + surge +
-                ", heave=" + heave +
                 '}';
     }
-
 }

@@ -34,9 +34,9 @@ public class inputWindsensorDao {
                             //打包代码，一定数量后在提交
                             ps.addBatch();
                         }
-                        ps.executeBatch();
-                        conn.commit();
-                        ps.clearBatch();
+                        ps.executeBatch();//将打入数量的包进行sql语句的执行
+                        conn.commit();//手动提交
+                        ps.clearBatch();//清除打入包的代码
                     }
                 }
             }
