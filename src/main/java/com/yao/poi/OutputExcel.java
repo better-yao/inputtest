@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-// 读取excel文件并且导出结果
+// 读取excel文件并且导出结果---读取的是结尾为.xls的excel文件---不能读取.xlsx结尾的excel文件
 public class OutputExcel {
     private static POIFSFileSystem fs;//poi文件流
     private static HSSFWorkbook wb;//获得execl

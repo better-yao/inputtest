@@ -5,8 +5,8 @@ public class Gpsfpd {
     public float Heading;
     public float Roll;
     public float Pitch;
-    public float Latitude;
-    public float Longitude;
+    public double Latitude;
+    public double Longitude;
     public float Altitude;
     public float Ve;
     public float Vn;
@@ -45,19 +45,19 @@ public class Gpsfpd {
         Pitch = pitch;
     }
 
-    public float getLatitude() {
+    public double getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(float latitude) {
+    public void setLatitude(double latitude) {
         Latitude = latitude;
     }
 
-    public float getLongitude() {
+    public double getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(float longitude) {
+    public void setLongitude(double longitude) {
         Longitude = longitude;
     }
 

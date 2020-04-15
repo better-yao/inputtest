@@ -113,11 +113,24 @@
       <version>3.9</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.monitorjbl</groupId>
+      <artifactId>xlsx-streamer</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+
     <!-- dbutils包 -->
     <dependency>
       <groupId>commons-dbutils</groupId>
       <artifactId>commons-dbutils</artifactId>
       <version>1.6</version>
+    </dependency>
+
+    <!-- jama -->
+    <dependency>
+      <groupId>gov.nist.math</groupId>
+      <artifactId>jama</artifactId>
+      <version>1.0.3</version>
     </dependency>
   </dependencies>
 
